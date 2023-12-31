@@ -23,7 +23,8 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	// start the apache webserver
-	"postStartCommand": "sudo apachectl start",
+	//sudo apachectl start && 
+	"postStartCommand": "chmod -R 770 /var/lib/mysql && chmod 755 /etc/rc.d/init.d/mysqld && sudo service mariadb start",
 
 	// For use with PHP or Apache (e.g.php -S localhost:8080 or apache2ctl start)
 	"forwardPorts": [80],

@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/php:dev-8.1-bullseye
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get install -y mariadb-client telnet iputils-ping \ 
+    && apt-get install -y mariadb-server telnet iputils-ping \ 
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install php  extensions
